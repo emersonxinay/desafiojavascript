@@ -18,18 +18,22 @@
       <button class="btn" type="button" name="button">0</button>
       <button class="btn" type="button" name="button">1</button>
       <button class="btn" type="button" name="button">2</button>
+      <br>
       <button class="btn" type="button" name="button">3</button>
       <button class="btn" type="button" name="button">4</button>
       <button class="btn" type="button" name="button">5</button>
+      <br>
       <button class="btn" type="button" name="button">6</button>
       <button class="btn" type="button" name="button">7</button>
       <button class="btn" type="button" name="button">8</button>
+      <br>
       <button class="btn" type="button" name="button">9</button>
 
       <br>
       <button class="btn" type="button" name="button">+</button>
       <button class="btn" type="button" name="button">-</button>
       <button class="btn" type="button" name="button">*</button>
+      <br>
       <button class="btn" type="button" name="button">/</button>
       <button type="button" name="button"></button>
       <br>
@@ -38,21 +42,8 @@
       <button id="result" type="button" name="result" onclick="limpiar()">limpiar
       </button>
 
-      <script type="text/javascript">
-      var result = document.getElementsByName("result")[0];
-      var calculator = document.getElementsByName("calculator")[0];
+      <script type="text/javascript" src="script5.js">
 
-      var calcTotal = function(){
-      calculator.value = eval(calculator.value);
-      }
-      document.querySelectorAll(".btn").forEach(item => {
-        item.addEventListener('click', event => {
-          calculator.value += item.innerHTML
-        })
-      })
-      function limpiar(){
-        calculator.value =" ";
-      }
       </script>
   </body>
 </html>
