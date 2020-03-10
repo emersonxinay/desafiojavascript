@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+  </head>
+  <body>
+
+    <!-- 6. Se requiere:
+      Crear una función llamada sortList() la cual debe ser ejecutada al presionar el botón “Clasificar
+      Arreglo”.
+      La función debe iterar el arreglo:
+      Si el elemento del array es un número impar debe ser agregado a la lista ‘Impares’.
+      Si el elemento es un número par debe ser agregado a la lista ‘Pares’.
+      Si el elemento es un string debe ser agregado a la lista ‘Strings’.
+      Los elementos deben ser agregados de manera dinámica manipulando el DOM mediante JS. -->
+    <button onclick="sortlist()">Clasificar Arreglo</button>
+      <ul id="par">
+      <strong>Pares</strong>
+      </ul>
+      <ul id="impar">
+      <strong>Impares</strong>
+      </ul>
+      <ul id="string">
+      <strong>Strings</strong>
+      </ul>
+
+      <script>
+      var arr = [1,'dos','tres',4,5,6,'siete',8,9,'diez'];
+      section_ul_string  = document.getElementById('string');
+        section_ul_par = document.getElementById('par');
+        section_ul_impar = document.getElementById('impar');
+      function sortlist(){
+        arr.map(function(x) {
+          if (isNaN(x)) {
+            addToList(section_ul_string, x)
+          }
+        else {
+
+          if (x%2 == 0) {
+
+            addToList(section_ul_par, x)
+          }
+          else {
+
+            addToList(section_ul_impar, x)
+          }
+        }
+
+      });
+      }
+      function addToList(section,str){
+        var node = document.createElement('li');
+
+        node.appendChild(document.createTextNode(str))
+        section.appendChild(node)
+      }
+      </script>
+
+
+  </body>
+</html>
